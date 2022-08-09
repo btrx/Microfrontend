@@ -6,7 +6,8 @@ export const getProducts = () =>
 export const getProductById = (id) =>
   fetch(`${API_SERVER}/products/${id}`).then((res) => res.json());
 
-export const currency = new Intl.NumberFormat("en-US", {
+export const currency = new Intl.NumberFormat("id-ID", {
   style: "currency",
-  currency: "USD",
+  currency: "IDR",
+  minimumFractionDigits: 3,
 });

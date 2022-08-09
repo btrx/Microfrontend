@@ -1,0 +1,1 @@
+terminal -e cd /addtocart && yarn start

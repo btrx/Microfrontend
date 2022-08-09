@@ -36,7 +36,7 @@ export default function CartContent() {
           <div className="flex-grow">
             <button
               id="clearcart"
-              className="bg-white border border-green-800 text-green-800 py-2 px-5 rounded-md text-sm"
+              className="bg-white border border-red-800 text-red-800 py-2 px-5 rounded-md text-sm"
               onClick={clearCart}
             >
               Clear Cart
@@ -44,7 +44,7 @@ export default function CartContent() {
           </div>
           <div className="flex-end">
             <button
-              className="bg-green-900 text-white py-2 px-5 rounded-md text-sm"
+              className="bg-red-900 text-white py-2 px-5 rounded-md text-sm"
               onClick={clearCart}
             >
               Checkout

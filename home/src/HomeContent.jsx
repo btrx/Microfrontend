@@ -22,7 +22,7 @@ export default function HomeContent() {
           <div className="flex">
             <div className="flex-grow font-bold">
               <Link to={`/product/${product.id}`}>
-                <a>{product.name}</a>
+                <a>{product.name.slice(0, 17)}</a>
               </Link>
             </div>
             <div className="flex-end">{currency.format(product.price)}</div>
@@ -31,7 +31,7 @@ export default function HomeContent() {
           {loggedIn && (
             <div className="text-right mt-2">
               <button
-                className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded"
+                className="bg-red-500 hover:bg-white text-white hover:text-red-500 text-sm font-bold py-2 px-4 rounded"
                 onClick={() => addToCart(product.id)}
                 id={`addtocart_${product.id}`}
               >
