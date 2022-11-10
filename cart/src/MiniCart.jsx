@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { ShoppingCartIcon } from "@heroicons/react/24/solid";
 
-import { cart, clearCart } from "./cart";
+import { cart, clearCart, logout } from "./cart";
 import { currency } from "home/products";
 
 export default function MiniCart() {
@@ -19,8 +20,10 @@ export default function MiniCart() {
   return (
     <>
       <span onClick={() => setShowCart(!showCart)} id="showcart_span">
-        <i className="ri-shopping-cart-2-fill text-2xl" id="showcart"></i>
-        {items.length}
+        <ShoppingCartIcon className="inline-flex relative h-9 " id="showcart" />
+        <div className="inline-flex absolute -top-2 -right-2 justify-center items-center text-lg">
+          {items.length}
+        </div>
       </span>
       {showCart && (
         <>
@@ -76,6 +79,14 @@ export default function MiniCart() {
                 </button>
               </div>
             </div>
+              <div>
+                <button
+                  className="bg-red-900 text-white py-2 px-5 rounded-md text-sm"
+                  onClick={clearCart}
+                >
+                  Logout
+                </button>
+              </div>
           </div>
         </>
       )}
