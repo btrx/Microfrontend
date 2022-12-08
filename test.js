@@ -13,10 +13,10 @@ export function handleSummary(data) {
     "result2.html": htmlReport(data),
     stdout: textSummary(data, { indent: " ", enableColors: true }),
   };
-};
+}
 
 export default function () {
-  const res = http.get("http://localhost:3000");
+  const res = http.get("http://localhost:3001");
   check(res, {
     "status was 200": (r) => r.status == 200,
     "transaction time OK": (r) => r.timings.duration < 500,

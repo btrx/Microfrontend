@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3002/",
+    publicPath: "https://cart-mf.vercell.app/",
   },
 
   resolve: {
@@ -44,9 +44,9 @@ module.exports = {
       name: "cart",
       filename: "remoteEntry.js",
       remotes: {
-        home: "home@http://localhost:3000/remoteEntry.js",
+        home: "home@https://microfrontend-sage.vercel.app/remoteEntry.js",
         pdp: "pdp@http://localhost:3001/remoteEntry.js",
-        cart: "cart@http://localhost:3002/remoteEntry.js",
+        cart: "cart@https://cart-mf.vercell.app/remoteEntry.js",
       },
       exposes: {
         "./cart": "./src/cart.js",
