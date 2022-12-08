@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FingerPrintIcon } from "@heroicons/react/24/solid";
 
 import { login, useLoggedIn } from "./cart";
 
@@ -14,7 +15,7 @@ export default function Login() {
   return (
     <>
       <span onClick={() => setShowLogin(!showLogin)}>
-        <i className="ri-fingerprint-line text-2xl" id="showlogin"></i>
+        <FingerPrintIcon className="h-9" id="showlogin" />
       </span>
       {showLogin && (
         <div

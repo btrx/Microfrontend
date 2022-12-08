@@ -1,0 +1,117 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "Start addtocart",
+		"type": "shell",
+		"command": "cd addtocart && yarn start",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Start cart",
+		"type": "shell",
+		"command": "cd cart && yarn start",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Start pdp",
+		"type": "shell",
+		"command": "cd pdp && yarn start",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Start server",
+		"type": "shell",
+		"command": "cd server && yarn start",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Start home",
+		"type": "shell",
+		"command": "cd home && yarn start",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Start",
+		"dependsOrder": "parallel",
+		"dependsOn": ["Start addtocart", "Start cart", "Start pdp", "Start server", "Start home"]
+	  },
+	  {
+		"label": "Build addtocart",
+		"type": "shell",
+		"command": "cd addtocart && yarn build",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Build cart",
+		"type": "shell",
+		"command": "cd cart && yarn build",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Build pdp",
+		"type": "shell",
+		"command": "cd pdp && yarn build",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Build server",
+		"type": "shell",
+		"command": "cd server && yarn build",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Build home",
+		"type": "shell",
+		"command": "cd home && yarn build",
+		"group": "test",
+		"presentation": {
+		  "reveal": "always",
+		  "panel": "new"
+		}
+	  },
+	  {
+		"label": "Build All",
+		"dependsOrder": "parallel",
+		"dependsOn": ["Build addtocart", "Build cart", "Build pdp", "Build server", "Build home"]
+	  },
+	]
+  }
