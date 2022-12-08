@@ -45,8 +45,8 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         home: "home@https://microfrontend-sage.vercel.app/remoteEntry.js",
-        pdp: "pdp@https://mf-dump-pdp.vercell.app/remoteEntry.js",
-        cart: "cart@https://cart-mf.vercell.app/remoteEntry.js",
+        pdp: "pdp@https://mf-dump-pdp.vercel.app/remoteEntry.js",
+        cart: "cart@https://cart-mf.vercel.app/remoteEntry.js",
       },
       exposes: {
         "./Header": "./src/Header.jsx",
