@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "https://mf-dump-pdp.vercell.app/",
+    publicPath: "https://mf-dump-pdp.vercel.app/",
   },
 
   resolve: {
@@ -45,9 +45,9 @@ module.exports = {
       filename: "remoteEntry.js",
       remotes: {
         home: "home@https://microfrontend-sage.vercel.app/remoteEntry.js",
-        pdp: "pdp@https://mf-dump-pdp.vercell.app/remoteEntry.js",
-        cart: "cart@https://cart-mf.vercell.app/remoteEntry.js",
-        addtocart: "addtocart@https://addtocart-mf.vercell.app/remoteEntry.js",
+        pdp: "pdp@https://mf-dump-pdp.vercel.app/remoteEntry.js",
+        cart: "cart@https://cart-mf.vercel.app/remoteEntry.js",
+        addtocart: "addtocart@https://addtocart-mf.vercel.app/remoteEntry.js",
       },
       exposes: {
         "./PDPContent": "./src/PDPContent.jsx",
